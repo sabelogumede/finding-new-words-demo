@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+    <title>newWordComents</title>
+    <style>
+            /* body {
+                margin: 0 auto;
+                max-width: 800px;
+                padding: 0 20px;
+            } */
+            
+            /* .container {
+                border: 2px solid #dedede;
+                background-color: #f1f1f1;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 10px 0;
+            } */
+            
+            /* .darker {
+                border-color: #ccc;
+                background-color: #ddd;
+            } */
+            
+            /* .container::after {
+                content: "";
+                clear: both;
+                display: table;
+            } */
+            
+            /* .container img {
+                float: left;
+                max-width: 60px;
+                width: 100%;
+                margin-right: 20px;
+                border-radius: 50%;
+            } */
+            
+            /* .container img.right {
+                float: right;
+                margin-left: 20px;
+                margin-right:0;
+            } */
+            
+            .time-right {
+                float: right;
+                color: #aaa;
+            }
+            
+            .time-left {
+                float: left;
+                color: #999;
+            }
+
+            /* comment text area*/
+            form { width: 100%;}
+            .shadow-textarea textarea.form-control::placeholder {
+                font-weight: 300;
+            }
+            .shadow-textarea textarea.form-control {
+            padding-left: 0.8rem;
+            }
+
+            /* modal scroll */
+            /* .modal{
+                display: block !important;
+            } */
+            .modal-dialog{
+                overflow-y: initial !important
+            }
+            .modal-body{
+            /* height: 250px; */
+            height: 500px;
+            overflow-y: auto;
+            }
+            .modal-body ul {
+                list-style: none;
+                padding: 0;
+            }
+
+    </style>
+
+  </head>
+  <body>
+
+    <!-- Button-1 to Open the Modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#commentsModal">
+        Open modal 1
+      </button>
+      <!-- Button-2 to Open the Modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#commentsModal">
+            Open modal 2
+      </button>
+      
+      <!-- The Modal -->
+      <div class="modal modal-dialog" id="commentsModal"; style="overflow-y: scroll; max-height:85%; margin-top: 50px; margin-bottom:50px;">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Comments {word}</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+                <!-- ##### -->
+
+                <ul>
+                    <li class="container darker">
+                        <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                        <i class="fal fa-check"></i>
+                    </li>
+
+                    <li class="container darker">
+                        <a href="#" class="text-right small"><i class="fal fa-check"></i> Reply</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                        <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                    </li>
+
+                    <li class="container darker"> 
+                        <span class="small time-left"><a href="#">user</a> Today, 11:00</span><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                        <a href="#" class="text-left small"><i class="ion-reply"></i> Reply</a>
+                    </li>
+
+                    <li class="container"> 
+                        <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                        <span class="time-right small"><a href="#">user</a> Today, 11:00</span>
+                    </li>
+
+                    <li class="container"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                        <span class="time-right small"><a href="#">user</a> Today, 11:00</span>
+                    </li>
+
+                </ul>
+                <!-- ### -->
+            </div> 
+            <!-- end of modal body -->
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <!-- comment form area -->
+                <form class="form-group shadow-textarea">
+                    <textarea name="wordComment" id="comment" rows="1" wrap="soft"></textarea>
+                    <input type="text" class="form-control" id="exampleFormControlTextarea6" placeholder="Write comment here...">
+                    <button type="button" class="btn btn-danger">Post</button>
+                    <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Submit</button> -->
+                </form>
+            </div>
+            <!-- end of footer -->
+          </div>
+
+        </div>
+      </div>
+        
+        
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
